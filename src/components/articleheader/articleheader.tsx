@@ -1,7 +1,13 @@
 import { Box, Center, Container, Stack, Text } from "@chakra-ui/react";
 import "./articleheader.scss";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const articleheader = () => {
+    useEffect(() => {
+        AOS.init();
+      }, []);
   return (
     <>
       <Box>
