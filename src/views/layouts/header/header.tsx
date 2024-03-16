@@ -7,7 +7,7 @@ import Mobileiconnav from "../../../components/mobileiconnav/mobileiconnav";
 const header = () => {
   return (
     <>
-      <Box p={"10px 0px"} bg={"rgb(1, 35, 73)"} pos={"sticky"} zIndex={"2"}>
+      <Box p={"10px 0px"} bg={"rgb(1, 35, 73)"} pos="sticky" top={"0px"} zIndex="2">
         <Container maxW={"container.xl"} p={"0px"}>
           <Box
             display={"flex"}

@@ -1,5 +1,5 @@
 import './App.scss'
-import Main from './views/layouts/main/main'
+import Main from './views/layouts/main/appmain'
 
 function App() {
   

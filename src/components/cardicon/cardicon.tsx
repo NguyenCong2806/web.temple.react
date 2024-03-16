@@ -5,6 +5,7 @@ import AOS from "aos";
 import { useEffect } from "react";
 
 const cardicon = () => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {
         AOS.init();
       }, []);
