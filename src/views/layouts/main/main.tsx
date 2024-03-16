@@ -1,3 +1,5 @@
+import Articleheader from "../../../components/articleheader/articleheader";
+import Carousel from "../../../components/carousel/carousel";
 import Footer from "../footer/footer";
 import Header from "../header/header";
 import "./main.scss";
@@ -7,6 +9,8 @@ const main = () => {
   return (
     <>
       <Header />
+      <Carousel/>
+      <Articleheader/>
       <Outlet />
       <Footer />
     </>
