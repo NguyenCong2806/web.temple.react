@@ -3,7 +3,6 @@ import {
   HStack,
   IconButton,
   Input,
-  Link,
   Popover,
   PopoverArrow,
   PopoverBody,
@@ -18,6 +17,7 @@ import {
   ChevronDownIcon,
   SearchIcon,
 } from "@chakra-ui/icons";
+import { NavLink, Link } from "react-router-dom";
 
 const dropdownnav = () => {
   return (
@@ -25,30 +25,22 @@ const dropdownnav = () => {
       <Box display={{ base: "none", md: "none", lg: "inline-flex" }}>
         <Stack direction={["column", "row"]} spacing="35px">
           <Box display={"inline-block"}>
-            <Link
-              className="text_size"
-              color={"#ffff"}
-              _hover={{ textDecoration: "none" }}
-            >
+            <NavLink to="/" style={{ color: "#ffff", fontSize: "18px" }}>
               Trang chủ
-            </Link>
+            </NavLink>
           </Box>
           <Box display={"inline-block"}>
             <Popover trigger={"hover"} placement={"bottom-start"}>
               <PopoverTrigger>
-                <Link
-                  className="text_size"
-                  color={"#ffff"}
-                  _hover={{ textDecoration: "none" }}
-                >
+                <NavLink to="/" style={{ color: "#ffff", fontSize: "18px" }}>
                   Ngành học
                   <ChevronDownIcon fontSize={"18px"} />
-                </Link>
+                </NavLink>
               </PopoverTrigger>
               <PopoverContent>
                 <PopoverArrow />
                 <PopoverBody p={"15px"}>
-                  <Link _hover={{ textDecoration: "none" }}>
+                  <NavLink to="/nganh_hoc" style={{ color: "rgb(1, 35, 73)", fontSize: "18px" }}>
                     <HStack p={"10px 0px"} spacing="24px">
                       <Box w={"90%"}>
                         <Text>Công nghệ thông tin</Text>
@@ -57,8 +49,8 @@ const dropdownnav = () => {
                         <ChevronRightIcon fontSize={"18px"} />
                       </Box>
                     </HStack>
-                  </Link>
-                  <Link _hover={{ textDecoration: "none" }}>
+                  </NavLink>
+                  <Link to={"/"}>
                     <HStack p={"10px 0px"} spacing="24px">
                       <Box w={"90%"}>
                         <Text>Kế toán</Text>
@@ -68,7 +60,7 @@ const dropdownnav = () => {
                       </Box>
                     </HStack>
                   </Link>
-                  <Link _hover={{ textDecoration: "none" }}>
+                  <Link to={"/"}>
                     <HStack p={"10px 0px"} spacing="24px">
                       <Box w={"90%"}>
                         <Text>Quản trị kinh doanh</Text>
@@ -78,7 +70,7 @@ const dropdownnav = () => {
                       </Box>
                     </HStack>
                   </Link>
-                  <Link _hover={{ textDecoration: "none" }}>
+                  <Link to={"/"}>
                     <HStack p={"10px 0px"} spacing="24px">
                       <Box w={"90%"}>
                         <Text>Ngôn ngữ anh</Text>
@@ -88,7 +80,7 @@ const dropdownnav = () => {
                       </Box>
                     </HStack>
                   </Link>
-                  <Link _hover={{ textDecoration: "none" }}>
+                  <Link to={"/"}>
                     <HStack p={"10px 0px"} spacing="24px">
                       <Box w={"90%"}>
                         <Text>Luật</Text>
@@ -103,31 +95,19 @@ const dropdownnav = () => {
             </Popover>
           </Box>
           <Box display={"inline-block"}>
-            <Link
-              className="text_size"
-              color={"#ffff"}
-              _hover={{ textDecoration: "none" }}
-            >
+            <Link className="text_size" color={"#ffff"} to={"/"}>
               Giới thiệu
             </Link>
           </Box>
           <Box display={"inline-block"}>
-            <Link
-              className="text_size"
-              color={"#ffff"}
-              _hover={{ textDecoration: "none" }}
-            >
+            <Link className="text_size" color={"#ffff"} to={"/"}>
               Đăng ký
             </Link>
           </Box>
           <Box display={"inline-block"}>
             <Popover trigger={"hover"} placement={"bottom-start"}>
               <PopoverTrigger>
-                <Link
-                  className="text_size"
-                  color={"#ffff"}
-                  _hover={{ textDecoration: "none" }}
-                >
+                <Link className="text_size" color={"#ffff"} to={"/"}>
                   Tin tức
                   <ChevronDownIcon fontSize={"18px"} />
                 </Link>
@@ -135,7 +115,7 @@ const dropdownnav = () => {
               <PopoverContent>
                 <PopoverArrow />
                 <PopoverBody p={"15px"}>
-                  <Link _hover={{ textDecoration: "none" }}>
+                  <Link to={"/"}>
                     <HStack p={"10px 0px"} spacing="24px">
                       <Box w={"90%"}>
                         <Text>Tuyển sinh</Text>
@@ -145,7 +125,7 @@ const dropdownnav = () => {
                       </Box>
                     </HStack>
                   </Link>
-                  <Link _hover={{ textDecoration: "none" }}>
+                  <Link to={"/"}>
                     <HStack p={"10px 0px"} spacing="24px">
                       <Box w={"90%"}>
                         <Text>Thông báo</Text>
@@ -165,7 +145,7 @@ const dropdownnav = () => {
                 <Text
                   className="text_size"
                   color={"#ffff"}
-                  _hover={{ textDecoration: "none", cursor:"pointer" }}
+                  _hover={{ textDecoration: "none", cursor: "pointer" }}
                 >
                   <SearchIcon />
                 </Text>
@@ -174,10 +154,10 @@ const dropdownnav = () => {
                 <PopoverArrow />
                 <PopoverBody p={"15px"}>
                   <Stack direction={"row"}>
-                    <Input type="text" placeholder="Nhập từ tìm kiếm..."/>
+                    <Input type="text" placeholder="Nhập từ tìm kiếm..." />
                     <IconButton
                       aria-label="Search database"
-                      colorScheme='blue'
+                      colorScheme="blue"
                       icon={<SearchIcon />}
                     />
                   </Stack>

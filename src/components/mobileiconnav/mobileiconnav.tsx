@@ -1,6 +1,5 @@
 import {
   Box,
-  Button,
   Center,
   Drawer,
   DrawerBody,
@@ -9,20 +8,12 @@ import {
   DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
-  HStack,
   IconButton,
   Input,
   Link,
-  Popover,
-  PopoverArrow,
-  PopoverBody,
-  PopoverContent,
-  PopoverTrigger,
   Stack,
-  Text,
   useDisclosure,
   Divider,
-  Collapse,
   AccordionIcon,
   AccordionItem,
   AccordionButton,
@@ -30,22 +21,11 @@ import {
   Accordion,
 } from "@chakra-ui/react";
 import "./mobileiconnav.scss";
-import {
-  ChevronDownIcon,
-  ChevronRightIcon,
-  HamburgerIcon,
-  SearchIcon,
-} from "@chakra-ui/icons";
+import { HamburgerIcon, SearchIcon } from "@chakra-ui/icons";
 import Logo from "../logo/logo";
-import { useState } from "react";
-
 const mobileiconnav = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [isnav, setisnav] = useState(false);
-  const onToggle = () => {
-    setisnav(!isnav);
-  };
   return (
     <>
       <Box display={{ base: "inline-block", md: "none", lg: "none" }}>
