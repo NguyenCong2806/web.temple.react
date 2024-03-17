@@ -1,0 +1,12 @@
+.box_img{
+    overflow: hidden;
+    &:hover{
+        .box_text{
+            visibility: visible;
+        }
+    }
+    .box_text{
+        visibility: hidden;
+        transition: all 200ms linear;
+    }
+}

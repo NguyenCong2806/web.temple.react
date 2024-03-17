@@ -13,7 +13,7 @@ const cardicon = () => {
     <Container maxW={"container.xl"} p={"0px"}>
         <Box data-aos="fade-right"
           display={"flex"}
-          flexDirection={"row"}
+          flexDirection={{ base: "column", md: "row", lg: "row" }}
           justifyItems={"center"}
           justifyContent={"space-between"}
           alignItems={"center"}
