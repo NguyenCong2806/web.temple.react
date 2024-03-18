@@ -8,6 +8,7 @@ import Imagelist from "../../components/imagelist/imagelist";
 import "./homeview.scss";
 import Boxtexticonheading from "../../components/boxtexticonheading/boxtexticonheading";
 import Boximgtextbottom from "../../components/boximgtextbottom/boximgtextbottom";
+import Feedback from "../../components/feedback/feedback";
 
 const homeview = () => {
   return (
@@ -23,6 +24,10 @@ const homeview = () => {
       <Articleheader />
       <Boxtexticonheading />
       <Boximgtextbottom/>
+      <Feedback/>
+      <Articleheader />
+      <Imagelist/>
+      <Boximgtext/>
     </Box>
   );
 };
