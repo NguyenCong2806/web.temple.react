@@ -28,7 +28,7 @@ const modalpopup = () => {
 
   return (
     <>
-      <Modal isOpen={isModal} onClose={onClose}>
+      <Modal isOpen={false} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Modal Title</ModalHeader>

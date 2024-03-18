@@ -1,0 +1,17 @@
+.box_img_text{
+    overflow: hidden;
+    &:hover{
+        .box_text{
+            visibility:visible;
+            width: 100%;
+            opacity: 1;
+            transition: all 1s ease-in-out;
+        }
+    }
+    .box_text{
+        width: 0%;
+        visibility:hidden;
+        opacity: 0;
+        transition: all 1s ease-in-out;
+    }
+}
