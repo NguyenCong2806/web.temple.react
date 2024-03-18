@@ -1,35 +1,37 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 // Import Swiper styles
 import "swiper/css";
 import { Button, Container, Box, Img, Text } from "@chakra-ui/react";
 import { EffectFade, Autoplay } from "swiper/modules";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect } from "react";
 import ResultData from "../../models/basemodel/ResultData";
-import carouselService from "../../services/carousel/carousel.service";
 import { Carousel } from "../../models/database/Carousel";
 import { conventpathimg } from "../../common/conventpathimg";
+import { useAppDispatch } from "../../stores";
+import { useSelector } from "react-redux";
+import { Datacarousels, IsLoading } from "../../stores/slices/carousel.slice";
+import carouselThunks from "../../helper/thunks/carousel.thunks";
+import { CircularProgress } from "@chakra-ui/react";
 
 const carousel = () => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [data, setdata] = useState<ResultData>(new ResultData());
+  const dispatch = useAppDispatch();
+  const _data = useSelector(Datacarousels) as ResultData;
+  const _isLoading = useSelector(IsLoading) as boolean;
 
-  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const load = async () => {
+    await dispatch(carouselThunks.fetchCarouselData());
+  };
   const loaddata = useCallback(async () => {
-    const _data = await carouselService.getall();
-    setdata(_data);
+    await load();
   }, []);
 
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
     loaddata();
   }, [loaddata]);
-  if(!data.status){
-    return (
-      <>
-      <h1>Load....</h1>
-      </>
-    )
+  if (_isLoading) {
+    return <CircularProgress isIndeterminate color="green.300" />;
   }
   return (
     <Swiper
@@ -48,7 +50,7 @@ const carousel = () => {
         disableOnInteraction: false,
       }}
     >
-      {data.item.map((item: Carousel) => (
+      {_data.item.map((item: Carousel) => (
         <SwiperSlide key={item._id}>
           <Box pos={"relative"}>
             <Box display={"inline"}>
