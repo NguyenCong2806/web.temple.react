@@ -26,3 +26,11 @@ body {
                        var(--sb-track-color);
     }
   }
+
+  .scroll-to-top{
+    text-align: center;
+    background: black;
+    svg{
+      padding-left: 11px;
+    }
+  }

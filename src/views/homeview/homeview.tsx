@@ -7,6 +7,8 @@ import Carousel from "../../components/carousel/carousel";
 import Imagelist from "../../components/imagelist/imagelist";
 import "./homeview.scss";
 import Boxtexticonheading from "../../components/boxtexticonheading/boxtexticonheading";
+import Boximgtextbottom from "../../components/boximgtextbottom/boximgtextbottom";
+import Feedback from "../../components/feedback/feedback";
 
 const homeview = () => {
   return (
@@ -21,6 +23,11 @@ const homeview = () => {
       <Boximgtext/>
       <Articleheader />
       <Boxtexticonheading />
+      <Boximgtextbottom/>
+      <Feedback/>
+      <Articleheader />
+      <Imagelist/>
+      <Boximgtext/>
     </Box>
   );
 };
