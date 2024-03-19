@@ -69,7 +69,7 @@ const cta = () => {
           >
             <Link to={"/"}>
               <Box  borderRadius="50%" w={"38px"} h={"38px"} overflow={"hidden"}>
-                <Image w={"100%"} h={"100%"} objectFit={"fill"} src="/public/logo-zalo-tron.jpg" />
+                <Image w={"100%"} h={"100%"} objectFit={"fill"} src="/public/th.jpg" />
               </Box>
             </Link>
           </Tooltip>
