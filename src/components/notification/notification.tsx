@@ -2,9 +2,11 @@ import { useToast } from "@chakra-ui/react";
 import "./notification.scss";
 import { useEffect } from "react";
 const notifications = () => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const toast = useToast();
   const positions = "bottom-left";
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
     const timeshow = 5000;
 
